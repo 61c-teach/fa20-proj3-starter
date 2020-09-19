@@ -12,7 +12,7 @@ VENUS_TRACE_PATTERN = "%1%\t%2%\t%5%\t%6%\t%7%\t%8%\t%9%\t%10%\t%pc%\t%inst%\t%l
 
 script_dir = os.path.realpath(sys.path[0])
 logisim_path = os.path.join(script_dir, "../../../logisim-evolution.jar")
-venus_path = os.path.join(script_dir, "../../../venus-cs61c-su20-proj3.jar")
+venus_path = os.path.join(script_dir, "../../../venus-cs61c-fa20-proj3.jar")
 
 def main(asm_file_paths, num_cycles):
   error_log_path = os.path.join(script_dir, "error.log")
@@ -121,8 +121,8 @@ def main(asm_file_paths, num_cycles):
       constant = circuit.find("./comp/[@name='Constant']")
       constant[1].attrib["val"] = hex(test_num_cycles)
 
-      cpu_lib = root.find("./lib/[@desc='file#../cpu/cpu.circ']")
-      cpu_lib.attrib["desc"] = "file#../../../cpu/cpu.circ"
+      test_harness_lib = root.find("./lib/[@desc='file#test_harness.circ']")
+      test_harness_lib.attrib["desc"] = "file#../../../harnesses/test_harness.circ"
 
       tree.write(test_circ_path)
     except Exception as e:
