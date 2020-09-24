@@ -121,8 +121,8 @@ def main(asm_file_paths, num_cycles):
       constant = circuit.find("./comp/[@name='Constant']")
       constant[1].attrib["val"] = hex(test_num_cycles)
 
-      cpu_lib = root.find("./lib/[@desc='file#../cpu/cpu.circ']")
-      cpu_lib.attrib["desc"] = "file#../../../cpu/cpu.circ"
+      test_harness_lib = root.find("./lib/[@desc='file#../harnesses/test_harness.circ']")
+      test_harness_lib.attrib["desc"] = "file#../../../harnesses/test_harness.circ"
 
       tree.write(test_circ_path)
     except Exception as e:
