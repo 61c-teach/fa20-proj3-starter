@@ -86,7 +86,7 @@
       <a name="valign" val="base"/>
     </tool>
   </lib>
-  <lib desc="file#/Users/rlund/berkeley/teaching/cs61c/fa20-proj3-starter/cpu/regfile.circ" name="7"/>
+  <lib desc="file#../cpu/regfile.circ" name="7"/>
   <main name="main"/>
   <options>
     <a name="gateUndefined" val="ignore"/>
@@ -312,6 +312,10 @@
       <a name="label" val="Test"/>
       <a name="width" val="8"/>
     </comp>
+    <comp lib="0" loc="(510,330)" name="Constant">
+      <a name="value" val="0x0"/>
+      <a name="width" val="8"/>
+    </comp>
     <comp lib="0" loc="(510,430)" name="Tunnel">
       <a name="facing" val="east"/>
       <a name="label" val="Test"/>
@@ -323,6 +327,11 @@
       <a name="output" val="true"/>
       <a name="width" val="8"/>
     </comp>
+    <comp lib="0" loc="(600,360)" name="Pin">
+      <a name="facing" val="north"/>
+      <a name="label" val="halt"/>
+      <a name="output" val="true"/>
+    </comp>
     <comp lib="0" loc="(70,460)" name="Tunnel">
       <a name="facing" val="east"/>
       <a name="label" val="Test"/>
@@ -333,6 +342,7 @@
       <a name="width" val="32"/>
     </comp>
     <comp lib="3" loc="(450,210)" name="Adder"/>
+    <comp lib="3" loc="(580,320)" name="Comparator"/>
     <comp lib="4" loc="(110,450)" name="ROM">
       <a name="appearance" val="logisim_evolution"/>
       <a name="contents">addr/data: 8 16
@@ -457,8 +467,13 @@
     <wire from="(440,260)" to="(510,260)"/>
     <wire from="(450,210)" to="(460,210)"/>
     <wire from="(460,170)" to="(460,210)"/>
+    <wire from="(510,260)" to="(510,310)"/>
+    <wire from="(510,310)" to="(540,310)"/>
+    <wire from="(510,330)" to="(540,330)"/>
     <wire from="(510,430)" to="(550,430)"/>
     <wire from="(510,70)" to="(510,260)"/>
+    <wire from="(580,320)" to="(600,320)"/>
+    <wire from="(600,320)" to="(600,360)"/>
     <wire from="(70,460)" to="(110,460)"/>
     <wire from="(790,480)" to="(820,480)"/>
   </circuit>
