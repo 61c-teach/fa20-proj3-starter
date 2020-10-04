@@ -112,7 +112,7 @@
       <a name="valign" val="base"/>
     </tool>
   </lib>
-  <lib desc="file#/Users/rlund/berkeley/teaching/cs61c/fa20-proj3-starter/cpu/alu.circ" name="7"/>
+  <lib desc="file#../../../cpu/alu.circ" name="7"/>
   <main name="main"/>
   <options>
     <a name="gateUndefined" val="ignore"/>
@@ -174,6 +174,8 @@
       <a name="width" val="8"/>
     </comp>
     <comp lib="0" loc="(190,240)" name="Constant">
+      <a name="value" val="0x18"/>
+      <a name="width" val="8"/>
     </comp>
     <comp lib="0" loc="(200,170)" name="Tunnel">
       <a name="label" val="Test"/>
@@ -263,8 +265,7 @@
       <a name="contents">addr/data: 8 32
 ffffbeef aa abcd0000 1010 abcd0000 1010 abcd0000 1010
 9 fe9 9 fe9 9 fe9 5 ffffabcd
-6 ffffbeef 5 2 ffffffff ffffabcd ffffffff ffffabcd
-3 ffff0009 1 2
+ffffffff ffffabcd ffffffff ffffabcd 3 ffff0009 1 2
 </a>
       <a name="dataWidth" val="32"/>
     </comp>
@@ -275,8 +276,8 @@ ffffbeef aa abcd0000 1010 abcd0000 1010 abcd0000 1010
       <a name="appearance" val="logisim_evolution"/>
       <a name="contents">addr/data: 8 32
 ffffffff 5 ffff0000 10101010 ffff0000 10101010 ffff0000 10101010
-6*f234567f ffffabcd 5 ffffbeef 6 1 f8adbcd3 ffffabcd
-ffffffff ffffabcd ffffffff 4 ffff0007 88dcd902 f819cd72
+6*f234567f ffffabcd 5 ffffabcd ffffffff ffffabcd ffffffff 4 
+ffff0007 88dcd902 f819cd72
 </a>
       <a name="dataWidth" val="32"/>
     </comp>
@@ -285,8 +286,7 @@ ffffffff ffffabcd ffffffff 4 ffff0007 88dcd902 f819cd72
       <a name="contents">addr/data: 8 4
 0 0 1 1 2 2 3 3
 4 4 5 5 6 6 7 7
-8 8 9 9 a a b b
-c c d d
+a a b b c c d d
 </a>
       <a name="dataWidth" val="4"/>
     </comp>
