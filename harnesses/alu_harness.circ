@@ -112,7 +112,7 @@
       <a name="valign" val="base"/>
     </tool>
   </lib>
-  <lib desc="file#../cpu/alu.circ" name="7"/>
+  <lib desc="file#/Users/rlund/berkeley/teaching/cs61c/fa20-proj3-starter/cpu/alu.circ" name="7"/>
   <main name="main"/>
   <options>
     <a name="gateUndefined" val="ignore"/>
@@ -210,24 +210,24 @@
       <a name="label" val="Test"/>
       <a name="width" val="8"/>
     </comp>
-    <comp lib="0" loc="(540,90)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="label" val="Input_A"/>
-      <a name="width" val="32"/>
-    </comp>
     <comp lib="0" loc="(550,170)" name="Tunnel">
       <a name="facing" val="east"/>
       <a name="label" val="ALU_Sel"/>
       <a name="width" val="4"/>
     </comp>
     <comp lib="0" loc="(60,270)" name="Clock"/>
-    <comp lib="0" loc="(600,60)" name="Probe">
-      <a name="facing" val="south"/>
-      <a name="radix" val="16"/>
-    </comp>
     <comp lib="0" loc="(610,190)" name="Probe">
       <a name="facing" val="north"/>
       <a name="radix" val="10unsigned"/>
+    </comp>
+    <comp lib="0" loc="(610,60)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="Input_A"/>
+      <a name="width" val="32"/>
+    </comp>
+    <comp lib="0" loc="(670,30)" name="Probe">
+      <a name="facing" val="south"/>
+      <a name="radix" val="16"/>
     </comp>
     <comp lib="0" loc="(790,410)" name="Tunnel">
       <a name="label" val="Input_B"/>
@@ -244,7 +244,7 @@
       <a name="output" val="true"/>
       <a name="width" val="32"/>
     </comp>
-    <comp lib="0" loc="(890,90)" name="Pin">
+    <comp lib="0" loc="(830,120)" name="Pin">
       <a name="facing" val="west"/>
       <a name="label" val="Result"/>
       <a name="output" val="true"/>
@@ -292,7 +292,7 @@
       <a name="font" val="SansSerif plain 24"/>
       <a name="text" val="There should be no red or blue wires, and the result should not be all X's"/>
     </comp>
-    <comp lib="7" loc="(850,90)" name="alu"/>
+    <comp lib="7" loc="(800,120)" name="alu"/>
     <wire from="(1170,410)" to="(1220,410)"/>
     <wire from="(1220,410)" to="(1220,450)"/>
     <wire from="(1220,410)" to="(1230,410)"/>
@@ -318,19 +318,21 @@
     <wire from="(40,100)" to="(40,230)"/>
     <wire from="(40,230)" to="(80,230)"/>
     <wire from="(420,130)" to="(420,160)"/>
-    <wire from="(420,130)" to="(600,130)"/>
+    <wire from="(420,130)" to="(710,130)"/>
     <wire from="(490,360)" to="(510,360)"/>
-    <wire from="(540,90)" to="(600,90)"/>
     <wire from="(550,170)" to="(610,170)"/>
     <wire from="(60,270)" to="(80,270)"/>
-    <wire from="(600,110)" to="(600,130)"/>
-    <wire from="(600,110)" to="(630,110)"/>
-    <wire from="(600,60)" to="(600,90)"/>
-    <wire from="(600,90)" to="(630,90)"/>
     <wire from="(610,170)" to="(610,190)"/>
-    <wire from="(610,170)" to="(630,170)"/>
-    <wire from="(630,130)" to="(630,170)"/>
+    <wire from="(610,170)" to="(700,170)"/>
+    <wire from="(610,60)" to="(670,60)"/>
+    <wire from="(670,30)" to="(670,60)"/>
+    <wire from="(670,60)" to="(720,60)"/>
+    <wire from="(700,170)" to="(700,240)"/>
+    <wire from="(700,240)" to="(760,240)"/>
+    <wire from="(710,130)" to="(710,180)"/>
+    <wire from="(710,180)" to="(720,180)"/>
     <wire from="(750,410)" to="(770,410)"/>
+    <wire from="(760,220)" to="(760,240)"/>
     <wire from="(770,410)" to="(770,440)"/>
     <wire from="(770,410)" to="(790,410)"/>
     <wire from="(770,440)" to="(820,440)"/>
@@ -338,8 +340,8 @@
     <wire from="(80,140)" to="(80,170)"/>
     <wire from="(80,170)" to="(140,170)"/>
     <wire from="(80,360)" to="(90,360)"/>
+    <wire from="(800,120)" to="(830,120)"/>
     <wire from="(820,440)" to="(820,460)"/>
-    <wire from="(850,90)" to="(890,90)"/>
     <wire from="(90,120)" to="(100,120)"/>
     <wire from="(910,360)" to="(930,360)"/>
   </circuit>
