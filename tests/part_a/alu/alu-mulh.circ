@@ -174,7 +174,7 @@
       <a name="width" val="8"/>
     </comp>
     <comp lib="0" loc="(190,240)" name="Constant">
-      <a name="value" val="0x4"/>
+      <a name="value" val="0x6"/>
       <a name="width" val="8"/>
     </comp>
     <comp lib="0" loc="(200,170)" name="Tunnel">
@@ -263,7 +263,7 @@
     <comp lib="4" loc="(510,350)" name="ROM">
       <a name="appearance" val="logisim_evolution"/>
       <a name="contents">addr/data: 8 32
-62381add ffffbeef 63234d49 ac273deb
+62381add ffffbeef 63234d49 ac273deb f0000000 00010000
 </a>
       <a name="dataWidth" val="32"/>
     </comp>
@@ -273,14 +273,14 @@
     <comp lib="4" loc="(90,350)" name="ROM">
       <a name="appearance" val="logisim_evolution"/>
       <a name="contents">addr/data: 8 32
-7435daa4 ffffdead ffffdead efffffff
+7435daa4 ffffdead ffffdead efffffff 00000010 00010000
 </a>
       <a name="dataWidth" val="32"/>
     </comp>
     <comp lib="4" loc="(930,350)" name="ROM">
       <a name="appearance" val="logisim_evolution"/>
       <a name="contents">addr/data: 8 4
-5*e
+7*e
 </a>
       <a name="dataWidth" val="4"/>
     </comp>
